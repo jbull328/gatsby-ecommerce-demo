@@ -1,4 +1,9 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
+  
   siteMetadata: {
     title: "Gatsby E-Commerce Starter",
   },
@@ -8,9 +13,10 @@ module.exports = {
     {
       resolve: `gatsby-source-stripe`,
       options: {
-        objects: ["Sku"],
-        secretKey: process.env.STIPE_SECRET_KEY,
+        objects: ["Sku", 'Product'],
+        secretKey: "sk_test_#",
         downloadFiles: true,
+        auth: false,
       },
     },
   ],

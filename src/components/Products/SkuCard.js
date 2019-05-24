@@ -29,7 +29,7 @@ const formatPrice = (amount, currency) => {
     let price = (amount / 100).toFixed(2)
     let numberFormat = new Intl.NumberFormat(["en-US"], {
         style: "currency",
-        currenct: currency,
+        currency: currency,
         currencyDisplay: "symbol",
     })
     return numberFormat.format(price)
@@ -53,7 +53,8 @@ const SkuCard = class extends React.Component {
         const sku = this.props.sku
         return (
             <div style={cardStyles}>
-                <h4>{sku.attributes.name}</h4>
+                <h4>{sku.product.name}</h4>
+
                 <p>Price: {formatPrice(sku.price, sku.currency)}</p>
                 <button 
                     style={buttonStyles}

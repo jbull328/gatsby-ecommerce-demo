@@ -18,15 +18,15 @@
       //https://dashboard.stripe.com/account/apikeys
 
         componentDidMount() {
-            this.stripe = window.Stripe("pk_test_#", {
-                betas: ["checkout_beta_4"],
+            this.stripe = window.Stripe("pk_test_QUZudzDRFxpmSEhSMREqB95Q", {
+               
             })
         }
 
         async redirectToChekout(event) {
             event.preventDefault()
             const { error } = await this.stripe.redirectToChekout({
-                items: [{sku: "sku_#, quantity: 1"}],
+                items: [{sku: "sku_F808QKF1RQn04K, quantity: 1"}],
                 successUrl: `http://localhost:8000/success/`,
                 cancelUrl: `https://localhost:8000`,
             })
@@ -40,7 +40,7 @@
             return (
                 <button style={buttonStyles} onClick={event => this.redirectToChekout(event)}
                 >
-                    Buy My E-Book
+                    Buy a T-Shirt
                 </button>
             )
         }
