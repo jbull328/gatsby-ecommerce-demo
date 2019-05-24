@@ -13,7 +13,7 @@ const containerStyles = {
 class Skus extends Component {
 
     state = {
-        stripe: window.Stripe('pk_test_QUZudzDRFxpmSEhSMREqB95Q', {
+        stripe: window.Stripe('#', {
             betas: ['checkout_beta_4'],
         }),
     }
@@ -27,10 +27,6 @@ class Skus extends Component {
                                 id
                                 currency
                                 price
-                                attributes {
-                                    size
-                                    color
-                                }
                                 product {
                                     name
                                 }

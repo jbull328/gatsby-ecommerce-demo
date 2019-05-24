@@ -6,7 +6,7 @@ import Skus from "../components/Products/Skus"
 
 const AdvancedExamplePage = () => (
     <Layout>
-        <h1>This is the Advanced Example Page</h1>
+        <h1>Some Merch</h1>
         <Skus/>
     </Layout>
 )
