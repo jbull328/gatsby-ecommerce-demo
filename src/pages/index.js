@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
+import { rhythm } from "../utils/typography"
 
 const infoCard = {
   maxWidth: '400px',
@@ -17,13 +18,22 @@ export default ({ data }) => {
     
     <h1>Hi people</h1>
     <p>Stripe blog demo.</p>
-    {data.allMarkdownRemark.edges.map(({node }) => (
+    {data.allMarkdownRemark.edges.map(({ node }) => (
       <div style={infoCard} key={node.id} >
       <div>
          {node.frontmatter.title}
       </div>
       <div>{node.excerpt}</div>
-      <button>Read More</button>
+      <Link 
+        to={node.fields.slug}
+        style={{
+          textDecoration: `none`,
+          color: `inherit`
+        }}
+        >
+          <button>Read More</button>
+        </Link>
+      
   </div>
     ))}
     
@@ -40,6 +50,9 @@ export const query = graphql`
               frontmatter {
                 title
                 data(formatString: "DD MMMM, YYYY")
+              }
+              fields {
+                slug
               }
               excerpt
             }
