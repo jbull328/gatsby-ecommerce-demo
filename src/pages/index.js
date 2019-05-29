@@ -9,6 +9,7 @@ const infoCard = {
   height: '600px',
   flexDirection: 'column',
   textAlign: 'center',
+  margin: `6%`,
 } 
 
 
@@ -18,11 +19,18 @@ export default ({ data }) => {
     
     <h1>Hi people</h1>
     <p>Stripe blog demo.</p>
-    {data.allMarkdownRemark.edges.map(({ node }) => (
+    <div style={{
+      display: `flex`,
+      width: `90%`,
+      margin: `8% auto`,
+    }} 
+
+    >{data.allMarkdownRemark.edges.map(({ node }) => (
       <div style={infoCard} key={node.id} >
-      <div>
+        <img src={node.frontmatter.hero} />
+      <h4>
          {node.frontmatter.title}
-      </div>
+      </h4>
       <div>{node.excerpt}</div>
       <Link 
         to={node.fields.slug}
@@ -33,10 +41,9 @@ export default ({ data }) => {
         >
           <button>Read More</button>
         </Link>
-      
-  </div>
+      </div>
     ))}
-    
+    </div>
   </Layout>
 )}
 
@@ -50,6 +57,7 @@ export const query = graphql`
               frontmatter {
                 title
                 data(formatString: "DD MMMM, YYYY")
+                hero
               }
               fields {
                 slug
