@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { graphql, StaticQuery } from "gatsby"
 import SkuCard from './SkuCard'
 
+
 const containerStyles = {
     display: 'flex',
     flexDirection: 'row',
@@ -11,12 +12,16 @@ const containerStyles = {
 }
 
 class Skus extends Component {
-
-    state = {
-        stripe: window.Stripe('#', {
-            betas: ['checkout_beta_4'],
-        }),
+    constructor() {
+        super();
+        this.state = {stripe: null};
     }
+
+    componentDidMount() {
+        this.setState({stripe: window.Stripe('#', {
+            betas: ['checkout_beta_4'],
+        })});
+    } 
     render() {
          return (
             <StaticQuery query={graphql`
