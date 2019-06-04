@@ -13,12 +13,9 @@
   }
 
   const Checkout = class extends React.Component {
-      //Initialize  Stripe.js with your published key.
-      //You can find your key in the Dashboard:
-      //https://dashboard.stripe.com/account/apikeys
 
         componentDidMount() {
-            this.stripe = window.Stripe("pk_test_QUZudzDRFxpmSEhSMREqB95Q", {
+            this.stripe = window.Stripe(process.env.STRIPE_PUBLIC_KEY, {
                
             })
         }

@@ -1,3 +1,11 @@
+<!-- Trial color palat for reference -->
+Dark: #000000
+Light: #FEFEFE
+Color1: #FDEE30
+Mid Dark: #3A4750
+Alternate Color1: #8BF00E
+
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

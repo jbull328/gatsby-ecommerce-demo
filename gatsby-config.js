@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   
   siteMetadata: {
-    title: "Gatsby E-Commerce Starter",
+    title: "Greater U",
   },
   plugins: [
     "gatsby-plugin-react-helmet", 

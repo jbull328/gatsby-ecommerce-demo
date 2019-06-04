@@ -12,13 +12,19 @@ const infoCard = {
   margin: `6%`,
 } 
 
+const leftInfoBlock = {
+  width: "45%",
+}
 
 export default ({ data }) => {
   return (
   <Layout>
+    <div style={leftInfoBlock}>
+      <h1>Free Email Courses</h1>
+      <p>Hi quality personal coarses, improve performance in all aspects of your life. Gain new perspective, open yourself up to greater posibilities.</p>
+      <h4>VIEW OUR COURSES</h4>
+    </div>
     
-    <h1>Hi people</h1>
-    <p>Stripe blog demo.</p>
     <div style={{
       display: `flex`,
       width: `90%`,

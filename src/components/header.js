@@ -2,21 +2,45 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+const mainLinks = {
+  display: 'flex',
+  color: 'white',
+  alignItems: 'center',
+  justifyContent: 'space-evenly'
+}
+
+const individualHeaderLinks = {
+  marginLeft: "48px",
+  letterSpacing: '1.2px'
+}
+
+const loginButton = {
+  background: 'white',
+  color: '#8BF00E',
+  padding: '12px 27px', 
+  borderRadius: '45px',
+  letterSpacing: '1.8px',
+  marginLeft: '48px',
+}
+
+const loginSignupButtonGroup = {
+  display: "flex",
+  alignItems: 'center',
+  color: 'white',
+  justifyContent: 'space-evenly'
+}
+
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `slateGrey`,
+      background: `#3A4750`,
       marginBottom: `1.45rem`,
+      display: 'flex',
+      justifyContent: 'space-around',
+      paddingTop: '12px',
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+      <h3 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
@@ -26,8 +50,25 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-      </h1>
-    </div>
+      </h3>
+
+        <div style={mainLinks}>
+          <h4 style={individualHeaderLinks}>
+            <Link to="/" style={{textDecoration: `none`, color: `white`}}>
+            Home
+            </Link>
+          </h4>
+          <h4 style={individualHeaderLinks}>About</h4>
+          <h4 style={individualHeaderLinks}>Coarses</h4>
+          <h4 style={individualHeaderLinks}>Contact</h4>
+        </div>
+          
+        <div style={loginSignupButtonGroup}>
+          <h4 style={individualHeaderLinks}>Login</h4>
+          <h4 style={loginButton}>Apply Now</h4>
+        </div>
+          
+    
   </header>
 )
 
