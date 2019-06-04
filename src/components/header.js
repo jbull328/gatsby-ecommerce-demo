@@ -58,9 +58,21 @@ const Header = ({ siteTitle }) => (
             Home
             </Link>
           </h4>
-          <h4 style={individualHeaderLinks}>About</h4>
-          <h4 style={individualHeaderLinks}>Coarses</h4>
-          <h4 style={individualHeaderLinks}>Contact</h4>
+          <h4 style={individualHeaderLinks}>
+            <Link to="/about"  style={{textDecoration: `none`, color: `white`}}>
+              About
+            </Link>
+          </h4>
+          <h4 style={individualHeaderLinks}>
+            <Link to="/courses" style={{textDecoration: `none`, color: `white`}}>
+              Coarses
+            </Link>
+          </h4>
+          <h4 style={individualHeaderLinks}>
+            <Link to="/contact" style={{textDecoration: `none`, color: `white`}}>
+              Contact
+            </Link>
+          </h4>
         </div>
           
         <div style={loginSignupButtonGroup}>
