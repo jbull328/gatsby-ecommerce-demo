@@ -77,7 +77,11 @@ const Header = ({ siteTitle }) => (
           
         <div style={loginSignupButtonGroup}>
           <h4 style={individualHeaderLinks}>Login</h4>
-          <h4 style={loginButton}>Apply Now</h4>
+          <h4 style={loginButton}>
+            <Link to="/applicationForm" style={{textDecoration: `none`, color: `#8BF00E`}}>
+              Apply Now
+            </Link>
+          </h4>
         </div>
           
     
