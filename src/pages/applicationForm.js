@@ -16,20 +16,18 @@ const ApplicationForm = () => (
     <div>
         <div style={infoBlock}>
             <h3>Apply for coaching</h3>
-            <p></p>
+            <p>When you sign up you will be added to a small group of fellow students. We will communicat through a popular chat app on a regular basis as we work on completing your mission.
+                Note: One on one coaching is available just note it in the form.
+            </p>
         </div>
         <form style={intrestForm} name="coachingSignUp" method="POST" data-netlify="true">
             <label>Name</label>
             <input type="text" name="name" />
             <label>email</label>
-            <input type="email" />
-            <label>?</label>
-            <input type="text" />
-            <label>Name</label>
-            <input type="text" />
-            <label>Name</label>
-            <input type="text" />
-            <input type="submit"/>
+            <input type="email" name="email"/>
+            <label>What are you struggling with?</label>
+            <textarea name="message"></textarea>
+            <button type="submit">Apply</button>
         </form>
     </div>
     
