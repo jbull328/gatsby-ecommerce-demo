@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
 import  heroImage  from "../images/heroImage.jpg"
+import heroSectionImage from "../images/hero.jpg"
 
 const infoCard = {
   maxWidth: '400px',
@@ -26,6 +27,23 @@ const upperSection = {
   justifyContent: "space-around"
 }
 
+const heroSection = {
+  width: '100%',
+  background: `url(${heroSectionImage})`,
+  backgroundSize: 'cover',
+  height: '480px',
+  position: 'relative',
+}
+
+const textBlock = {
+  position: 'absolute',
+  bottom: '35%',
+  right: '65%',
+  backgroundColor: 'black',
+  color: 'white',
+  padding: '22px 28px'
+}
+
 export default ({ data }) => {
   return (
   <Layout>
@@ -38,10 +56,18 @@ export default ({ data }) => {
       
       <div style={rightImageBlock}>
         <img src={heroImage}/>
+        
       </div>
 
     </div>
-    
+    <div style={heroSection}>
+    <div style={textBlock}>
+          <h4>Join the movement</h4>
+          <p>It time to take a step down a new path.</p>
+          <p>Some text about infos and stuff.</p>
+        </div>
+      
+    </div>
     <div style={{
       display: `flex`,
       width: `90%`,
