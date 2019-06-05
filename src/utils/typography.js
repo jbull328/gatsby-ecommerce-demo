@@ -1,7 +1,6 @@
 import Typography from "typography"
-import Github from "typography-theme-github"
+import githubTheme from "typography-theme-github"
 
-const typography = new Typography(Github)
+const typography = new Typography(githubTheme)
 
-export const { scale, rhythm, options} = typography
 export default typography

@@ -7,7 +7,7 @@ const intrestForm = {
 }
 
 const infoBlock = {
-
+    width: '78%',
 }
 
 const ApplicationForm = () => (
@@ -16,8 +16,8 @@ const ApplicationForm = () => (
     <div>
         <div style={infoBlock}>
             <h3>Apply for coaching</h3>
-            <p>When you sign up you will be added to a small group of fellow students. We will communicat through a popular chat app on a regular basis as we work on completing your mission.
-                Note: One on one coaching is available just note it in the form.
+            <p>When you sign up you will be added to a small group of fellow students. We will communicate through a popular chat app on a regular basis as we work on completing your mission.
+               <br/> Note: One on one coaching is available just note it in the form.
             </p>
         </div>
         <form style={intrestForm} name="coachingSignUp" method="POST" data-netlify="true">
