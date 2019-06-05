@@ -1,12 +1,24 @@
 import React from "react"
 import Layout from "../components/layout"
 
+const intrestForm = {
+    display: 'flex',
+    flexDirection: 'column'
+}
+
+const infoBlock = {
+
+}
 
 const ApplicationForm = () => (
   <Layout>
     
     <div>
-        <form>
+        <div style={infoBlock}>
+            <h3>Apply for coaching</h3>
+            <p></p>
+        </div>
+        <form style={intrestForm} name="coachingSignUp" method="POST" data-netlify="true">
             <label>Name</label>
             <input type="text" name="name" />
             <label>email</label>
