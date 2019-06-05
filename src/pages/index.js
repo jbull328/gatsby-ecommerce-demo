@@ -13,6 +13,12 @@ const infoCard = {
   margin: `6%`,
 } 
 
+const readMoreButton = {
+  padding: "8px 24px",
+  letterSpacing: '1.4px',
+  marginTop: '22px'
+}
+
 const leftInfoBlock = {
   width: "45%",
 }
@@ -51,7 +57,9 @@ export default ({ data }) => {
       <div style={leftInfoBlock}>
         <h1>Free Email Courses</h1>
         <p>Hi quality personal coarses, improve performance in all aspects of your life. Gain new perspective, open yourself up to greater posibilities.</p>
-        <h4>VIEW OUR COURSES</h4>
+        <Link to="/courses"  style={{textDecoration: `none`, color: `#3A4750`}}>
+          <h4>VIEW OUR COURSES</h4>
+        </Link>
       </div>
       
       <div style={rightImageBlock}>
@@ -88,7 +96,7 @@ export default ({ data }) => {
           color: `inherit`
         }}
         >
-          <button>Read More</button>
+          <button style={readMoreButton}>Read More</button>
         </Link>
       </div>
     ))}
