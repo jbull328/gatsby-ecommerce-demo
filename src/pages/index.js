@@ -21,11 +21,13 @@ const readMoreButton = {
 
 const leftInfoBlock = {
   width: "45%",
+  marginTop: "44px"
 }
 
 const rightImageBlock = {
   width: '55%',
   padding: '38px',
+  marginTop: "44px"
 }
 
 const upperSection = {

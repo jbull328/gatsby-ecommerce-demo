@@ -33,7 +33,7 @@ const loginSignupButtonGroup = {
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `#3A4750`,
+      background: `#161925`,
       marginBottom: `1.45rem`,
       display: 'flex',
       justifyContent: 'space-around',

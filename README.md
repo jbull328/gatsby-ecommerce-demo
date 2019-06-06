@@ -1,9 +1,9 @@
 <!-- Trial color palat for reference -->
-Dark: #000000
+Dark: #161925
 Light: #FEFEFE
-Color1: #FDEE30
-Mid Dark: #3A4750
-Alternate Color1: #8BF00E
+Color1: #8BF00E
+Mid Dark: #465054
+Alternate Color1: 
 
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
