@@ -1,0 +1,29 @@
+
+.loginSignupButtonGroup  {
+    display: "flex";
+    align-items: 'center';
+    color: 'white';
+    justify-content: 'space-evenly';
+    text-decoration: 'none';
+  }
+
+  .mainLinks {
+    display: 'flex';
+    color: 'white';
+    align-items: 'center';
+    justify-content: 'space-evenly';
+  }
+  
+  .individualHeaderLinks {
+    margin-left: "48px";
+    letter-spacing: '1.2px';
+  }
+  
+  .loginButton {
+    background: 'white';
+    color: '#8BF00E';
+    padding: '12px 27px'; 
+    border-radius: '45px';
+    letter-spacing: '1.8px';
+    margin-left: '48px';
+  }

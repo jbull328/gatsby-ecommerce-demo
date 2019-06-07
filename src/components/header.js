@@ -1,38 +1,8 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { Component } from "react"
+import styles from "../styles/header.module.css"
 const netlifyIdentity = require("netlify-identity-widget");
-
-const mainLinks = {
-  display: 'flex',
-  color: 'white',
-  alignItems: 'center',
-  justifyContent: 'space-evenly'
-}
-
-const individualHeaderLinks = {
-  marginLeft: "48px",
-  letterSpacing: '1.2px'
-}
-
-const loginButton = {
-  background: 'white',
-  color: '#8BF00E',
-  padding: '12px 27px', 
-  borderRadius: '45px',
-  letterSpacing: '1.8px',
-  marginLeft: '48px',
-}
-
-const loginSignupButtonGroup = {
-  display: "flex",
-  alignItems: 'center',
-  color: 'white',
-  justifyContent: 'space-evenly',
-  textDecoration: 'none'
-}
-
-
 
 class Header extends Component {
   componentDidMount() {
@@ -62,33 +32,33 @@ class Header extends Component {
         </Link>
       </h3>
 
-        <div style={mainLinks}>
-          <h4 style={individualHeaderLinks}>
-            <Link to="/" style={{textDecoration: `none`, color: `white`}}>
+        <div className={mainLinks}>
+          <h4 className={individualHeaderLinks}>
+            <Link to="/" className={{textDecoration: `none`, color: `white`}}>
             Home
             </Link>
           </h4>
-          <h4 style={individualHeaderLinks}>
-            <Link to="/about"  style={{textDecoration: `none`, color: `white`}}>
+          <h4 className={individualHeaderLinks}>
+            <Link to="/about"  className={{textDecoration: `none`, color: `white`}}>
               About
             </Link>
           </h4>
-          <h4 style={individualHeaderLinks}>
-            <Link to="/courses" style={{textDecoration: `none`, color: `white`}}>
+          <h4 className={individualHeaderLinks}>
+            <Link to="/courses" sclassName={{textDecoration: `none`, color: `white`}}>
               Coarses
             </Link>
           </h4>
-          <h4 style={individualHeaderLinks}>
-            <Link to="/contact" style={{textDecoration: `none`, color: `white`}}>
+          <h4 sclassName={individualHeaderLinks}>
+            <Link to="/contact" className={{textDecoration: `none`, color: `white`}}>
               Contact
             </Link>
           </h4>
         </div>
           
-        <div style={loginSignupButtonGroup}>
-          <div data-netlify-identity-menu style={{textDecoration: `none`, color: `#8BF00E`}}></div>
-          <h4 style={loginButton}>
-            <Link to="/applicationForm" style={{textDecoration: `none`, color: `#8BF00E`}}>
+        <div className={stles.loginSignupButtonGroup}>
+          <div data-netlify-identity-menu className={{textDecoration: `none`, color: `#8BF00E`}}></div>
+          <h4 className={loginButton}>
+            <Link to="/applicationForm" className={{textDecoration: `none`, color: `#8BF00E`}}>
               Apply Now
             </Link>
           </h4>
