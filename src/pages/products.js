@@ -4,11 +4,11 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Skus from "../components/Products/Skus"
 
-const AdvancedExamplePage = () => (
+const Products = () => (
     <Layout>
         <h1>Some Merch</h1>
         <Skus/>
     </Layout>
 )
 
-export default AdvancedExamplePage
+export default Products

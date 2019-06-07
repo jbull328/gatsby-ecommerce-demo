@@ -86,6 +86,7 @@ export const query = graphql`
                 title
                 data(formatString: "DD MMMM, YYYY")
                 hero
+                private
               }
               fields {
                 slug
