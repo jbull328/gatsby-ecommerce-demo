@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import  heroImage  from "../images/heroImage.jpg"
 import heroSectionImage from "../images/hero.jpg"
 
+
 const infoCard = {
   maxWidth: '400px',
   display: 'flex',
@@ -78,12 +79,13 @@ export default ({ data }) => {
         </div>
       
     </div>
+    {/* <p>will need to do something different with the below section.</p>
     <div style={{
       display: `flex`,
       width: `90%`,
       margin: `8% auto`,
     }} 
-
+    
     >{data.allMarkdownRemark.edges.map(({ node }) => (
       <div style={infoCard} key={node.id} >
         <img src={node.frontmatter.hero} />
@@ -102,7 +104,7 @@ export default ({ data }) => {
         </Link>
       </div>
     ))}
-    </div>
+    </div> */}
   </Layout>
 )}
 
