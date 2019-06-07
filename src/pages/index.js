@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
 import  heroImage  from "../images/heroImage.jpg"
 import heroSectionImage from "../images/hero.jpg"
+import BulletInfo from "../components/bulletInfo"
 
 
 const infoCard = {
@@ -79,6 +80,7 @@ export default ({ data }) => {
         </div>
       
     </div>
+    <BulletInfo />
     {/* <p>will need to do something different with the below section.</p>
     <div style={{
       display: `flex`,
