@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { Component } from "react"
+const netlifyIdentity = require("netlify-identity-widget");
 
 const mainLinks = {
   display: 'flex',
@@ -30,7 +31,15 @@ const loginSignupButtonGroup = {
   justifyContent: 'space-evenly'
 }
 
-const Header = ({ siteTitle }) => (
+
+
+class Header extends Component {
+  componentDidMount() {
+    netlifyIdentity.init();
+  }
+ render() {
+ 
+  return (
   <header
     style={{
       background: `#161925`,
@@ -48,7 +57,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          Greater U
         </Link>
       </h3>
 
@@ -76,7 +85,7 @@ const Header = ({ siteTitle }) => (
         </div>
           
         <div style={loginSignupButtonGroup}>
-          <h4 style={individualHeaderLinks}>Login</h4>
+          <div data-netlify-identity-menu style={{textDecoration: `none`, color: `#8BF00E`}}></div>
           <h4 style={loginButton}>
             <Link to="/applicationForm" style={{textDecoration: `none`, color: `#8BF00E`}}>
               Apply Now
@@ -86,7 +95,9 @@ const Header = ({ siteTitle }) => (
           
     
   </header>
-)
+  )
+  }
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
