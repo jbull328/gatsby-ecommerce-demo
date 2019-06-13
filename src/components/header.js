@@ -93,7 +93,7 @@ class Header extends Component {
   )
   }
 }
-
+  console.log(process.env)
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }
