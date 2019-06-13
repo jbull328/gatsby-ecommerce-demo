@@ -18,7 +18,7 @@ class Skus extends Component {
     }
 
     componentDidMount() {
-        this.setState({stripe: window.Stripe(process.env.STRIPE_SECRET_KEY, {
+        this.setState({stripe: window.Stripe(process.env.STRIPE_PUBLIC_KEY, {
             betas: ['checkout_beta_4'],
         })});
     } 

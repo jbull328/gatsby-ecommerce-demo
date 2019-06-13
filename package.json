@@ -5,7 +5,6 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "dotenv": "^8.0.0",
     "gatsby": "^2.4.3",
     "gatsby-image": "^2.0.41",
     "gatsby-plugin-manifest": "^2.1.1",
@@ -28,7 +27,8 @@
     "typography-theme-github": "^0.16.19"
   },
   "devDependencies": {
-    "prettier": "^1.17.0"
+    "prettier": "^1.17.0",
+    "dotenv": "^8.0.0"
   },
   "keywords": [
     "gatsby"
