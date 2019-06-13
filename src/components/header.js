@@ -73,11 +73,6 @@ class Header extends Component {
             </Link>
           </h4>
           <h4 style={individualHeaderLinks}>
-            <Link to="/courses" style={{textDecoration: `none`, color: `white`}}>
-              Coarses
-            </Link>
-          </h4>
-          <h4 style={individualHeaderLinks}>
             <Link to="/contact" style={{textDecoration: `none`, color: `white`}}>
               Contact
             </Link>
@@ -87,7 +82,7 @@ class Header extends Component {
         <div style={loginSignupButtonGroup}>
           <div data-netlify-identity-menu style={{textDecoration: `none`, color: `#8BF00E`}}></div>
           <h4 style={loginButton}>
-            <Link to="/applicationForm" style={{textDecoration: `none`, color: `#8BF00E`}}>
+            <Link to="/applicationForm/" style={{textDecoration: `none`, color: `#8BF00E`}}>
               Apply Now
             </Link>
           </h4>
