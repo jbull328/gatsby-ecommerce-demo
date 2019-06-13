@@ -20,7 +20,7 @@ const buttonStyles = {
     outline: "none",
     padding: "12px",
     boxShadow: "2px 5px 10px rgba(0,0,0,.1)",
-    backgroundColor: "rgb(255, 178, 56)",
+    backgroundColor: "#8BF00E",
     borderRadius: "6px",
     letterSpacing: "1.5",
 }
@@ -59,7 +59,7 @@ const SkuCard = class extends React.Component {
                 <button 
                     style={buttonStyles}
                     onClick={event =>this.redirectToCheckout(event, sku.id)}
-                >Buy Me</button>
+                >Sign up session</button>
 
             </div>
         )
