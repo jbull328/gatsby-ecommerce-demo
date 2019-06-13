@@ -1,5 +1,9 @@
+let activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+
+console.log(`Using environment config: '${activeEnv}'`)
+
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env.${activeEnv}`,
 })
 
 module.exports = {
@@ -15,7 +19,7 @@ module.exports = {
       resolve: `gatsby-source-stripe`,
       options: {
         objects: ["Sku", 'Product'],
-        secretKey: "sk_test_ivRZqvBlI7nizpZ1VHGUcELs00Xp3CmZrX",
+        secretKey: process.env.STRIPE_SECRET_KEY,
         downloadFiles: true,
         auth: false,
       },
