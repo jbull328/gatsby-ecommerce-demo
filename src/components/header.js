@@ -28,7 +28,8 @@ const loginSignupButtonGroup = {
   display: "flex",
   alignItems: 'center',
   color: 'white',
-  justifyContent: 'space-evenly'
+  justifyContent: 'space-evenly',
+  textDecoration: 'none'
 }
 
 
